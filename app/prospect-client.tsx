@@ -8,14 +8,14 @@ const WHATSAPP = "https://wa.me/5511930115929?text=Olá%2C%20quero%20conhecer%20
 const SYSTEM = "https://prospect-pf.svssolucoes.com.br/";
 
 const features = [
-  ["01", "Buscas agendadas", "Configure marca, modelo, ano, faixa de preço, estado e frequência."],
-  ["02", "Filtros avançados", "Encontre rapidamente anúncios alinhados aos critérios da sua operação."],
-  ["03", "Organização por status", "Separe oportunidades entre novos, contatados, interessados e arquivados."],
-  ["04", "Integração com WhatsApp", "Apoie a abordagem comercial conectando seus canais de atendimento."],
-  ["05", "Regras de mensagem", "Padronize comunicações com critérios e informações de cada anúncio."],
-  ["06", "Histórico dos anúncios", "Acompanhe alterações e mantenha contexto para cada oportunidade."],
-  ["07", "Relatórios operacionais", "Visualize a completude das informações e o andamento da captação."],
-  ["08", "Exportação de dados", "Leve anúncios e informações para suas análises e processos internos."],
+  ["⏱", "Buscas agendadas", "Configure marca, modelo, ano, faixa de preço, estado e frequência."],
+  ["⌕", "Filtros avançados", "Encontre rapidamente anúncios alinhados aos critérios da sua operação."],
+  ["▦", "Organização por status", "Separe oportunidades entre novos, contatados, interessados e arquivados."],
+  ["◉", "Integração com WhatsApp", "Apoie a abordagem comercial conectando seus canais de atendimento."],
+  ["✦", "Regras de mensagem", "Padronize comunicações com critérios e informações de cada anúncio."],
+  ["↺", "Histórico dos anúncios", "Acompanhe alterações e mantenha contexto para cada oportunidade."],
+  ["◒", "Relatórios operacionais", "Visualize a completude das informações e o andamento da captação."],
+  ["⇩", "Exportação de dados", "Leve anúncios e informações para suas análises e processos internos."],
 ];
 
 const faq = [
@@ -107,7 +107,7 @@ export function ProspectLanding() {
         </div>
       </div></section>
 
-      <section className="section" id="recursos"><div className="shell"><div className="section-title"><div><div className="kicker">Recursos</div><h2>Da busca ao processo <span>comercial</span></h2></div><p>Ferramentas para dar ritmo, contexto e organização à captação de veículos.</p></div><div className="feature-grid">{features.map(([n,t,d]) => <article className="feature" key={n}><div><span>{n}</span><i>↗</i></div><h3>{t}</h3><p>{d}</p></article>)}</div></div></section>
+      <section className="section" id="recursos"><div className="shell"><div className="section-title"><div><div className="kicker">Recursos</div><h2>Da busca ao processo <span>comercial</span></h2></div><p>Ferramentas para dar ritmo, contexto e organização à captação de veículos.</p></div><div className="feature-grid">{features.map(([icon,t,d],index) => <article className={`feature feature-${index + 1}`} key={t}><div><span className="feature-icon" aria-hidden="true">{icon}</span><i>↗</i></div><h3>{t}</h3><p>{d}</p><span className="card-orbit" aria-hidden="true"/></article>)}</div></div></section>
 
       <section className="section benefits" id="beneficios"><div className="shell benefit-grid"><div><div className="kicker">Benefícios para a operação</div><h2>Mais tempo para negociar.<br/><span>Mais capacidade para captar.</span></h2><p>Enquanto sua equipe negocia, o Prospect PF continua procurando e organizando oportunidades.</p><a className="button" href="#demonstracao">Conhecer o Prospect PF →</a></div><div className="benefit-list">{["Reduza tarefas repetitivas e controles dispersos","Chegue mais rápido a novas oportunidades","Dê visibilidade ao trabalho da equipe","Acompanhe contatos e interessados com contexto","Escale as buscas sem ampliar o esforço manual na mesma proporção","Centralize dados para decisões comerciais"].map((x,i)=><div key={x}><b>{String(i+1).padStart(2,"0")}</b><span>{x}</span></div>)}</div></div></section>
 
