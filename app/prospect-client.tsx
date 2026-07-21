@@ -5,7 +5,6 @@ import Link from "next/link";
 import { FormEvent, useState } from "react";
 
 const WHATSAPP = "https://wa.me/5511930115929?text=Olá%2C%20quero%20conhecer%20o%20Prospect%20PF";
-const SYSTEM = "https://prospect-pf.svssolucoes.com.br/";
 
 const features = [
   ["⏱", "Buscas agendadas", "Configure marca, modelo, ano, faixa de preço, estado e frequência."],
@@ -59,7 +58,7 @@ export function ProspectLanding() {
         <nav className={menu ? "navlinks open" : "navlinks"} aria-label="Navegação principal">
           <a href="#como-funciona">Como funciona</a><a href="#recursos">Recursos</a><a href="#beneficios">Benefícios</a><a href="#faq">Perguntas</a>
         </nav>
-        <div className="nav-actions"><a className="text-link" href={SYSTEM} target="_blank" rel="noreferrer">Entrar no sistema</a><a className="button mini" href="#demonstracao">Agendar demonstração</a></div>
+        <div className="nav-actions"><a className="button mini" href="#demonstracao">Agendar demonstração</a></div>
         <button className="menu" onClick={() => setMenu(!menu)} aria-expanded={menu} aria-label="Abrir menu">{menu ? "×" : "☰"}</button>
       </div>
     </header>
@@ -122,7 +121,7 @@ export function ProspectLanding() {
       </div></section>
     </main>
 
-    <footer><div className="shell footer-grid"><div><Logo/><p>Automação e organização para o processo de captação automotiva.</p></div><div><b>Produto</b><a href="#como-funciona">Como funciona</a><a href="#recursos">Recursos</a><a href={SYSTEM}>Entrar no sistema</a></div><div><b>SVS Soluções</b><a href="https://svssolucoes.com.br/">Site institucional</a><a href="mailto:comercial@svssolucoes.com.br">comercial@svssolucoes.com.br</a><a href={WHATSAPP}>WhatsApp comercial</a></div><div><b>Legal</b><Link href="/politica-de-privacidade">Política de Privacidade</Link><Link href="/termos-de-uso">Termos de Uso</Link></div></div><div className="shell footer-bottom"><span>© 2026 SVS Soluções em Tecnologia. Todos os direitos reservados.</span><span>Prospect PF é uma solução desenvolvida pela SVS.</span></div></footer>
+    <footer><div className="shell footer-grid"><div><Logo/><p>Automação e organização para o processo de captação automotiva.</p></div><div><b>Produto</b><a href="#como-funciona">Como funciona</a><a href="#recursos">Recursos</a></div><div><b>SVS Soluções</b><a href="https://svssolucoes.com.br/">Site institucional</a><a href="mailto:comercial@svssolucoes.com.br">comercial@svssolucoes.com.br</a><a href={WHATSAPP}>WhatsApp comercial</a></div><div><b>Legal</b><Link href="/politica-de-privacidade">Política de Privacidade</Link><Link href="/termos-de-uso">Termos de Uso</Link></div></div><div className="shell footer-bottom"><span>© 2026 SVS Soluções em Tecnologia. Todos os direitos reservados.</span><span>Prospect PF é uma solução desenvolvida pela SVS.</span></div></footer>
     <a className="whatsapp-float" href={WHATSAPP} target="_blank" rel="noreferrer" aria-label="Falar com a SVS no WhatsApp">◉ <span>Falar no WhatsApp</span></a>
   </>;
 }
