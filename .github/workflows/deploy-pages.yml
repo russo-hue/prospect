@@ -34,7 +34,7 @@ jobs:
         run: npx next build
         env:
           GITHUB_PAGES: "true"
-          NEXT_PUBLIC_BASE_PATH: /prospect
+          NEXT_PUBLIC_BASE_PATH: ""
 
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5

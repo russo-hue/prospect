@@ -5,7 +5,7 @@ import "./globals.css";
 const geist = Geist({ variable: "--font-geist", subsets: ["latin"] });
 const isGitHubPages = process.env.GITHUB_PAGES === "true";
 const publicBaseUrl = isGitHubPages
-  ? "https://russo-hue.github.io/prospect"
+  ? "https://prospect.vnftisolutions.com.br"
   : "https://prospect-pf.svssolucoes.com.br";
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   applicationName: "Prospect PF",
   openGraph: { type: "website", locale: "pt_BR", siteName: "Prospect PF", title: "Seu funcionário digital para captação de veículos", description: "Centralize buscas, oportunidades e contatos em um único processo.", images: [{ url: `${publicBaseUrl}/og.png`, width: 1536, height: 1024, alt: "Prospect PF - sistema de captação de veículos" }] },
   twitter: { card: "summary_large_image", title: "Prospect PF", description: "Tecnologia para captação automotiva.", images: [`${publicBaseUrl}/og.png`] },
-  icons: { icon: isGitHubPages ? "/prospect/favicon.svg" : "/favicon.svg" },
+  icons: { icon: "/favicon.svg" },
 };
 
 export const viewport: Viewport = { themeColor: "#070b19", colorScheme: "dark" };
