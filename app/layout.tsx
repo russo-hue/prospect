@@ -3,15 +3,19 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 
 const geist = Geist({ variable: "--font-geist", subsets: ["latin"] });
+const isGitHubPages = process.env.GITHUB_PAGES === "true";
+const publicBaseUrl = isGitHubPages
+  ? "https://russo-hue.github.io/prospect"
+  : "https://prospect-pf.svssolucoes.com.br";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://prospect-pf.svssolucoes.com.br"),
+  metadataBase: new URL(publicBaseUrl),
   title: { default: "Prospect PF | Captação automotiva", template: "%s | Prospect PF" },
   description: "Sistema de captação de veículos para lojas, garagistas e equipes de compras.",
   applicationName: "Prospect PF",
-  openGraph: { type: "website", locale: "pt_BR", siteName: "Prospect PF", title: "Seu funcionário digital para captação de veículos", description: "Centralize buscas, oportunidades e contatos em um único processo.", images: [{ url: "/og.png", width: 1536, height: 1024, alt: "Prospect PF - sistema de captação de veículos" }] },
-  twitter: { card: "summary_large_image", title: "Prospect PF", description: "Tecnologia para captação automotiva.", images: ["/og.png"] },
-  icons: { icon: "/favicon.svg" },
+  openGraph: { type: "website", locale: "pt_BR", siteName: "Prospect PF", title: "Seu funcionário digital para captação de veículos", description: "Centralize buscas, oportunidades e contatos em um único processo.", images: [{ url: `${publicBaseUrl}/og.png`, width: 1536, height: 1024, alt: "Prospect PF - sistema de captação de veículos" }] },
+  twitter: { card: "summary_large_image", title: "Prospect PF", description: "Tecnologia para captação automotiva.", images: [`${publicBaseUrl}/og.png`] },
+  icons: { icon: isGitHubPages ? "/prospect/favicon.svg" : "/favicon.svg" },
 };
 
 export const viewport: Viewport = { themeColor: "#070b19", colorScheme: "dark" };
